@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+nhập từ cần tra:
+<br>
+<input type="text"name="nhập từ cần tra" id="english" >
+<button type="button"name="check"onclick="dictionary()">check</button>
+
+<p id="result"></p>
+<script>
+    let english = ["go","live"];
+    let vietnamese = ["di","ở"];
+
+    function dictionary() {
+        let dichra = document.getElementById('english').value.toString();
+        let a=true;
+        for (let i = 0; i < english.length; i++) {
+            if (dichra === english[i]) {
+                document.getElementById('result').innerHTML = vietnamese[i];
+                a = false;
+                break;
+            }
+        }
+        if (a) alert('the word you are looking up is not found')
+    }
+    
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
